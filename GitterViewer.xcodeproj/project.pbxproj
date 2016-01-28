@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		369DC1011C5A788D00C05079 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369DC1001C5A788D00C05079 /* AppDelegate.swift */; };
+		369DC1031C5A788D00C05079 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369DC1021C5A788D00C05079 /* ViewController.swift */; };
+		369DC1061C5A788D00C05079 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 369DC1041C5A788D00C05079 /* Main.storyboard */; };
+		369DC1091C5A788D00C05079 /* GitterViewer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 369DC1071C5A788D00C05079 /* GitterViewer.xcdatamodeld */; };
+		369DC10B1C5A788D00C05079 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 369DC10A1C5A788D00C05079 /* Assets.xcassets */; };
+		369DC10E1C5A788D00C05079 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 369DC10C1C5A788D00C05079 /* LaunchScreen.storyboard */; };
+		369DC1191C5A788D00C05079 /* GitterViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369DC1181C5A788D00C05079 /* GitterViewerTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		369DC1151C5A788D00C05079 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 369DC0F51C5A788D00C05079 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 369DC0FC1C5A788D00C05079;
+			remoteInfo = GitterViewer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		369DC0FD1C5A788D00C05079 /* GitterViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitterViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		369DC1001C5A788D00C05079 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		369DC1021C5A788D00C05079 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		369DC1051C5A788D00C05079 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		369DC1081C5A788D00C05079 /* GitterViewer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GitterViewer.xcdatamodel; sourceTree = "<group>"; };
+		369DC10A1C5A788D00C05079 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		369DC10D1C5A788D00C05079 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		369DC10F1C5A788D00C05079 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		369DC1141C5A788D00C05079 /* GitterViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitterViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		369DC1181C5A788D00C05079 /* GitterViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitterViewerTests.swift; sourceTree = "<group>"; };
+		369DC11A1C5A788D00C05079 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		369DC0FA1C5A788D00C05079 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		369DC1111C5A788D00C05079 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		369DC0F41C5A788D00C05079 = {
+			isa = PBXGroup;
+			children = (
+				369DC0FF1C5A788D00C05079 /* GitterViewer */,
+				369DC1171C5A788D00C05079 /* GitterViewerTests */,
+				369DC0FE1C5A788D00C05079 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		369DC0FE1C5A788D00C05079 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				369DC0FD1C5A788D00C05079 /* GitterViewer.app */,
+				369DC1141C5A788D00C05079 /* GitterViewerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		369DC0FF1C5A788D00C05079 /* GitterViewer */ = {
+			isa = PBXGroup;
+			children = (
+				369DC1001C5A788D00C05079 /* AppDelegate.swift */,
+				369DC1021C5A788D00C05079 /* ViewController.swift */,
+				369DC1041C5A788D00C05079 /* Main.storyboard */,
+				369DC10A1C5A788D00C05079 /* Assets.xcassets */,
+				369DC10C1C5A788D00C05079 /* LaunchScreen.storyboard */,
+				369DC10F1C5A788D00C05079 /* Info.plist */,
+				369DC1071C5A788D00C05079 /* GitterViewer.xcdatamodeld */,
+			);
+			path = GitterViewer;
+			sourceTree = "<group>";
+		};
+		369DC1171C5A788D00C05079 /* GitterViewerTests */ = {
+			isa = PBXGroup;
+			children = (
+				369DC1181C5A788D00C05079 /* GitterViewerTests.swift */,
+				369DC11A1C5A788D00C05079 /* Info.plist */,
+			);
+			path = GitterViewerTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		369DC0FC1C5A788D00C05079 /* GitterViewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 369DC11D1C5A788D00C05079 /* Build configuration list for PBXNativeTarget "GitterViewer" */;
+			buildPhases = (
+				369DC0F91C5A788D00C05079 /* Sources */,
+				369DC0FA1C5A788D00C05079 /* Frameworks */,
+				369DC0FB1C5A788D00C05079 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GitterViewer;
+			productName = GitterViewer;
+			productReference = 369DC0FD1C5A788D00C05079 /* GitterViewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		369DC1131C5A788D00C05079 /* GitterViewerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 369DC1201C5A788D00C05079 /* Build configuration list for PBXNativeTarget "GitterViewerTests" */;
+			buildPhases = (
+				369DC1101C5A788D00C05079 /* Sources */,
+				369DC1111C5A788D00C05079 /* Frameworks */,
+				369DC1121C5A788D00C05079 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				369DC1161C5A788D00C05079 /* PBXTargetDependency */,
+			);
+			name = GitterViewerTests;
+			productName = GitterViewerTests;
+			productReference = 369DC1141C5A788D00C05079 /* GitterViewerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		369DC0F51C5A788D00C05079 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Alexis Digital";
+				TargetAttributes = {
+					369DC0FC1C5A788D00C05079 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					369DC1131C5A788D00C05079 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 369DC0FC1C5A788D00C05079;
+					};
+				};
+			};
+			buildConfigurationList = 369DC0F81C5A788D00C05079 /* Build configuration list for PBXProject "GitterViewer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 369DC0F41C5A788D00C05079;
+			productRefGroup = 369DC0FE1C5A788D00C05079 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				369DC0FC1C5A788D00C05079 /* GitterViewer */,
+				369DC1131C5A788D00C05079 /* GitterViewerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		369DC0FB1C5A788D00C05079 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				369DC10E1C5A788D00C05079 /* LaunchScreen.storyboard in Resources */,
+				369DC10B1C5A788D00C05079 /* Assets.xcassets in Resources */,
+				369DC1061C5A788D00C05079 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		369DC1121C5A788D00C05079 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		369DC0F91C5A788D00C05079 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				369DC1091C5A788D00C05079 /* GitterViewer.xcdatamodeld in Sources */,
+				369DC1031C5A788D00C05079 /* ViewController.swift in Sources */,
+				369DC1011C5A788D00C05079 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		369DC1101C5A788D00C05079 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				369DC1191C5A788D00C05079 /* GitterViewerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		369DC1161C5A788D00C05079 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 369DC0FC1C5A788D00C05079 /* GitterViewer */;
+			targetProxy = 369DC1151C5A788D00C05079 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		369DC1041C5A788D00C05079 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				369DC1051C5A788D00C05079 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		369DC10C1C5A788D00C05079 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				369DC10D1C5A788D00C05079 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		369DC11B1C5A788D00C05079 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		369DC11C1C5A788D00C05079 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		369DC11E1C5A788D00C05079 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GitterViewer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexisdigital.GitterViewer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		369DC11F1C5A788D00C05079 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GitterViewer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexisdigital.GitterViewer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		369DC1211C5A788D00C05079 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GitterViewerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexisdigital.GitterViewerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitterViewer.app/GitterViewer";
+			};
+			name = Debug;
+		};
+		369DC1221C5A788D00C05079 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GitterViewerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexisdigital.GitterViewerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitterViewer.app/GitterViewer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		369DC0F81C5A788D00C05079 /* Build configuration list for PBXProject "GitterViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				369DC11B1C5A788D00C05079 /* Debug */,
+				369DC11C1C5A788D00C05079 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		369DC11D1C5A788D00C05079 /* Build configuration list for PBXNativeTarget "GitterViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				369DC11E1C5A788D00C05079 /* Debug */,
+				369DC11F1C5A788D00C05079 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		369DC1201C5A788D00C05079 /* Build configuration list for PBXNativeTarget "GitterViewerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				369DC1211C5A788D00C05079 /* Debug */,
+				369DC1221C5A788D00C05079 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		369DC1071C5A788D00C05079 /* GitterViewer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				369DC1081C5A788D00C05079 /* GitterViewer.xcdatamodel */,
+			);
+			currentVersion = 369DC1081C5A788D00C05079 /* GitterViewer.xcdatamodel */;
+			path = GitterViewer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 369DC0F51C5A788D00C05079 /* Project object */;
+}
