@@ -16,12 +16,14 @@
 		364C1AC21C5A86AB00F7F2FA /* PersistentStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364C1AC11C5A86AB00F7F2FA /* PersistentStack.swift */; };
 		364C1AC41C5A879E00F7F2FA /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364C1AC31C5A879E00F7F2FA /* Store.swift */; };
 		364C1AC81C5A886600F7F2FA /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364C1AC61C5A886600F7F2FA /* Room.swift */; };
+		364C1ACA1C5A99DC00F7F2FA /* RoomRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364C1AC91C5A99DC00F7F2FA /* RoomRequest.swift */; };
 		369DC1011C5A788D00C05079 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369DC1001C5A788D00C05079 /* AppDelegate.swift */; };
 		369DC1061C5A788D00C05079 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 369DC1041C5A788D00C05079 /* Main.storyboard */; };
 		369DC1091C5A788D00C05079 /* GitterViewer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 369DC1071C5A788D00C05079 /* GitterViewer.xcdatamodeld */; };
 		369DC10B1C5A788D00C05079 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 369DC10A1C5A788D00C05079 /* Assets.xcassets */; };
 		369DC10E1C5A788D00C05079 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 369DC10C1C5A788D00C05079 /* LaunchScreen.storyboard */; };
 		369DC1191C5A788D00C05079 /* GitterViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369DC1181C5A788D00C05079 /* GitterViewerTests.swift */; };
+		36E2049A1C5AB82300E1B928 /* GitterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E204991C5AB82300E1B928 /* GitterRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,7 @@
 		364C1AC11C5A86AB00F7F2FA /* PersistentStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentStack.swift; sourceTree = "<group>"; };
 		364C1AC31C5A879E00F7F2FA /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		364C1AC61C5A886600F7F2FA /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		364C1AC91C5A99DC00F7F2FA /* RoomRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomRequest.swift; sourceTree = "<group>"; };
 		369DC0FD1C5A788D00C05079 /* GitterViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitterViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		369DC1001C5A788D00C05079 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		369DC1051C5A788D00C05079 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +57,7 @@
 		369DC1141C5A788D00C05079 /* GitterViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitterViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		369DC1181C5A788D00C05079 /* GitterViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitterViewerTests.swift; sourceTree = "<group>"; };
 		369DC11A1C5A788D00C05079 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36E204991C5AB82300E1B928 /* GitterRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitterRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +121,10 @@
 				369DC10C1C5A788D00C05079 /* LaunchScreen.storyboard */,
 				369DC10F1C5A788D00C05079 /* Info.plist */,
 				369DC1071C5A788D00C05079 /* GitterViewer.xcdatamodeld */,
-				364C1AC61C5A886600F7F2FA /* Room.swift */,
 				3601E0011C5A7CFF001E527B /* Endpoints.swift */,
+				36E204991C5AB82300E1B928 /* GitterRequest.swift */,
+				364C1AC61C5A886600F7F2FA /* Room.swift */,
+				364C1AC91C5A99DC00F7F2FA /* RoomRequest.swift */,
 				364C1ABF1C5A862800F7F2FA /* RoomTableViewController.swift */,
 				364C1AC11C5A86AB00F7F2FA /* PersistentStack.swift */,
 				364C1AC31C5A879E00F7F2FA /* Store.swift */,
@@ -258,7 +264,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				364C1AC01C5A862800F7F2FA /* RoomTableViewController.swift in Sources */,
+				36E2049A1C5AB82300E1B928 /* GitterRequest.swift in Sources */,
 				364C1AC81C5A886600F7F2FA /* Room.swift in Sources */,
+				364C1ACA1C5A99DC00F7F2FA /* RoomRequest.swift in Sources */,
 				369DC1091C5A788D00C05079 /* GitterViewer.xcdatamodeld in Sources */,
 				364C1AC21C5A86AB00F7F2FA /* PersistentStack.swift in Sources */,
 				364C1AC41C5A879E00F7F2FA /* Store.swift in Sources */,

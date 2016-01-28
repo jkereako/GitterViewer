@@ -6,7 +6,7 @@
 //  Copyright © 2016 Alexis Digital. All rights reserved.
 //
 
-import Foundation
+import Swish
 
 enum Gitter {
   case Rooms
