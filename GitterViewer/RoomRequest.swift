@@ -42,7 +42,7 @@ extension RoomRequest: GitterRequest {
     return request
   }
 
-  func makeRequest() {
+  func makeRequest(completion: (success: Bool) -> Void) {
     APIClient().performRequest(self) { (response: Result<ResponseObject, NSError>) in
 
       switch response {
@@ -51,8 +51,12 @@ extension RoomRequest: GitterRequest {
           Room(managedObjectContext: self.managedObjectContext, decodedRoom: decodedRoom)
         }
 
+        completion(success: true)
+
       case .Failure(_):
         print("Unable to parse.")
+
+        completion(success: false)
       }
     }
   }

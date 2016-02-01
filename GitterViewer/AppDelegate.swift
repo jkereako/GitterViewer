@@ -17,14 +17,18 @@ class AppDelegate: UIResponder {
 extension AppDelegate: UIApplicationDelegate {
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
+    guard let navController = window?.rootViewController as? UINavigationController,
+    let rootView = navController.viewControllers.first as? RoomTableViewController else {
+      fatalError(
+        "\n\n rootViewController is either nil or not a UINavigationController.\n\n"
+      )
+    }
 
     //-- Persistence
     let store = Store(modelName: "GitterViewer")
     let stack = PersistentStack(modelURL: store.modelURL, storeURL: store.storeURL)
 
-    let request = RoomRequest(managedObjectContext: stack.managedObjectContext)
-
-    request.makeRequest()
+    rootView.managedObjectContext = stack.managedObjectContext
 
     return true
   }

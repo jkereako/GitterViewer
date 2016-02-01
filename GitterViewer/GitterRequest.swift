@@ -12,5 +12,5 @@ public protocol GitterRequest: Request {
   var authToken: String { get }
 
   func baseRequest(url url: NSURL, method: RequestMethod) -> NSURLRequest
-  func makeRequest()
+  func makeRequest(completion: (success: Bool) -> Void)
 }
