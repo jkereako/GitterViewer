@@ -6,12 +6,28 @@
 //  Copyright © 2016 Alexis Digital. All rights reserved.
 //
 
-import Foundation
 import CoreData
+import Argo
+import Curry
 
+struct DecodedRoom: Decodable {
+  let identifier: String
+  let name: String
+  let topic: String?
+  let path: String
+  let lastAccessedAt: NSDate
+
+  static func decode(j: JSON) -> Decoded<DecodedRoom> {
+    return curry(DecodedRoom.init)
+      <^> j <| "id"
+      <*> j <| "name"
+      <*> j <|? "topic"
+      <*> j <| "url"
+      <*> (j <| "lastAccessTime" >>- toNSDate)
+  }
+}
 
 final class Room: NSManagedObject {
-
   static var entityName: String { return "Room" }
 
   /**
@@ -25,20 +41,18 @@ final class Room: NSManagedObject {
    :param: lastAccessed
    */
   convenience init(
-    managedObjectContext: NSManagedObjectContext, identifier: String, name: String, topic: String?,
-    path: String, lastAccessed: NSDate?
-    ) {
+    managedObjectContext: NSManagedObjectContext, decodedRoom: DecodedRoom) {
       let entityDescription = NSEntityDescription.entityForName(
         Room.entityName, inManagedObjectContext: managedObjectContext
         )!
 
       self.init(entity: entityDescription, insertIntoManagedObjectContext: managedObjectContext)
 
-      self.identifier = identifier
-      self.name = name
-      self.topic = topic
-      self.path = path
-      self.lastAccessedAt = lastAccessed
+      self.identifier = decodedRoom.identifier
+      self.name = decodedRoom.name
+      self.topic = decodedRoom.topic
+      self.path = decodedRoom.path
+      self.lastAccessedAt = decodedRoom.lastAccessedAt
 
       createdAt = NSDate()
       modifiedAt = createdAt

@@ -7,7 +7,7 @@
 //
 
 //import Foundation
-import Curry
+import CoreData
 import Argo
 import Result
 import Swish
@@ -24,30 +24,14 @@ let toNSDate: String -> Decoded<NSDate> = {
 }
 
 struct RoomRequest {
-  struct Room: Decodable {
-    let identifier: String
-    let name: String
-    let topic: String?
-    let path: String
-    let lastAccessedAt: NSDate
-
-    static func decode(j: JSON) -> Decoded<RoomRequest.Room> {
-
-      return curry(RoomRequest.Room.init)
-        <^> j <| "id"
-        <*> j <| "name"
-        <*> j <|? "topic"
-        <*> j <| "url"
-        <*> (j <| "lastAccessTime" >>- toNSDate)
-    }
-  }
+  let managedObjectContext: NSManagedObjectContext
 }
 
 extension RoomRequest: GitterRequest {
   // We expect an array of rooms, so declare the response object as such.
-  typealias ResponseObject = [RoomRequest.Room]
+  typealias ResponseObject = [DecodedRoom]
 
-  var authToken: String { return "your_auth_token" }
+  var authToken: String { return "" }
 
   func baseRequest(url url: NSURL, method: RequestMethod) -> NSURLRequest {
     let request = NSMutableURLRequest(URL: url)
@@ -59,9 +43,17 @@ extension RoomRequest: GitterRequest {
   }
 
   func makeRequest() {
-    let request = RoomRequest()
-    APIClient().performRequest(request) { (response: Result<ResponseObject, NSError>) in
-      print(response)
+    APIClient().performRequest(self) { (response: Result<ResponseObject, NSError>) in
+
+      switch response {
+      case let .Success(decodedRooms):
+        for decodedRoom in decodedRooms {
+          Room(managedObjectContext: self.managedObjectContext, decodedRoom: decodedRoom)
+        }
+
+      case .Failure(_):
+        print("Unable to parse.")
+      }
     }
   }
 

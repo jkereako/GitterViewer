@@ -22,7 +22,7 @@ extension AppDelegate: UIApplicationDelegate {
     let store = Store(modelName: "GitterViewer")
     let stack = PersistentStack(modelURL: store.modelURL, storeURL: store.storeURL)
 
-    let request = RoomRequest()
+    let request = RoomRequest(managedObjectContext: stack.managedObjectContext)
 
     request.makeRequest()
 
