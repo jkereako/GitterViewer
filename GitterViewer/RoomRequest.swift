@@ -12,37 +12,40 @@ import Argo
 import Result
 import Swish
 
+// TODO: Put somewhere else
+let jsonDateFormatter: NSDateFormatter = {
+  let dateFormatter = NSDateFormatter()
+  dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+  return dateFormatter
+}()
+
+let toNSDate: String -> Decoded<NSDate> = {
+  .fromOptional(jsonDateFormatter.dateFromString($0))
+}
+
 struct RoomRequest {
-  static let jsonDateFormatter: NSDateFormatter = {
-    let dateFormatter = NSDateFormatter()
-    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssz"
-    return dateFormatter
-  }()
-
-  let toNSDate: String -> Decoded<NSDate> = {
-    .fromOptional(jsonDateFormatter.dateFromString($0))
-  }
-
   struct Room: Decodable {
     let identifier: String
     let name: String
     let topic: String?
     let path: String
-    //    let lastAccessedAt: NSDate
+    let lastAccessedAt: NSDate
 
     static func decode(j: JSON) -> Decoded<RoomRequest.Room> {
+
       return curry(RoomRequest.Room.init)
         <^> j <| "id"
         <*> j <| "name"
         <*> j <|? "topic"
         <*> j <| "url"
-      //        <*> (j <| "lastAccessed" >>- toNSDate)
+        <*> (j <| "lastAccessTime" >>- toNSDate)
     }
   }
 }
 
 extension RoomRequest: GitterRequest {
-  typealias ResponseObject = RoomRequest.Room
+  // We expect an array of rooms, so declare the response object as such.
+  typealias ResponseObject = [RoomRequest.Room]
 
   var authToken: String { return "your_auth_token" }
 
@@ -58,7 +61,7 @@ extension RoomRequest: GitterRequest {
   func makeRequest() {
     let request = RoomRequest()
     APIClient().performRequest(request) { (response: Result<ResponseObject, NSError>) in
-      print(response.value)
+      print(response)
     }
   }
 
